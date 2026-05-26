@@ -7,9 +7,9 @@ conf = SparkConf().setMaster("local[*]").setAppName("test_spark")
 sc = SparkContext(conf=conf)
 
 #通过parallelize方法将Python对象加载到Spark内，成为RDD对象
-rdd = sc.parallelize([('男', 99), ('男', 88), ('女', 99), ('女', 66)])
+rdd = sc.parallelize([('itcast',4), ('python', 6),('itheima', 7),('spark',4),('pyspark', 3)])
 
-rdd2 = rdd.reduceByKey(lambda x, y : x + y)
+rdd2 = rdd.sortBy(lambda x : x[1], ascending=False, numPartitions=1)
 print(rdd2.collect())
 
 sc.stop()
