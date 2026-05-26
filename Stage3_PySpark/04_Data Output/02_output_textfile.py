@@ -20,3 +20,5 @@ rdd3 = sc.parallelize([[1, 3, 5], [6, 7, 9], [11, 13, 11]], 1)
 rdd1.saveAsTextFile("D:/output1")
 rdd2.saveAsTextFile("D:/output2")
 rdd3.saveAsTextFile("D:/output3")
+
+sc.stop()
