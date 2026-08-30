@@ -9,3 +9,4 @@ env/
 # 忽略 Python 编译产生的缓存文件
 __pycache__/
 *.pyc.DS_Store
+.DS_Store

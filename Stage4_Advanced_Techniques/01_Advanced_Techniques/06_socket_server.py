@@ -1,5 +1,6 @@
 # socket服务端开发
 import socket
+from typing import List
 
 # 创建socket对象
 socket_server = socket.socket()
